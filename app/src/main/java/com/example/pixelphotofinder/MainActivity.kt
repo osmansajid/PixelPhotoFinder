@@ -1,4 +1,4 @@
-package com.example.PixelPhotoFinder
+package com.example.pixelphotofinder
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

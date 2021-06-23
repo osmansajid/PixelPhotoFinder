@@ -1,4 +1,4 @@
-package com.example.PixelPhotoFinder
+package com.example.pixelphotofinder
 
 import org.junit.Test
 
