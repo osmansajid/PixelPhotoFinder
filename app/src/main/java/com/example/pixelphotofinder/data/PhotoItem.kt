@@ -1,4 +1,4 @@
-package com.example.pixelphotofinder.modelclasses
+package com.example.pixelphotofinder.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

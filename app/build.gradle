@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.imagesearchingapp"
+        applicationId "com.example.pixelphotofinder"
         minSdk 21
         targetSdk 30
         versionCode 1
@@ -69,7 +69,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     // Paging 3
-    implementation "androidx.paging:paging-runtime:$pagingVersion"
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
 }
 
 kapt {
