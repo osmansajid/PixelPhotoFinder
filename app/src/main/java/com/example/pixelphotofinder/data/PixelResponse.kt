@@ -1,4 +1,4 @@
-package com.example.pixelphotofinder.networkapi
+package com.example.pixelphotofinder.data
 
 import com.example.pixelphotofinder.data.PhotoItem
 

@@ -1,6 +1,7 @@
 package com.example.pixelphotofinder.networkapi
 
 import com.example.pixelphotofinder.BuildConfig
+import com.example.pixelphotofinder.data.PixelResponse
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
