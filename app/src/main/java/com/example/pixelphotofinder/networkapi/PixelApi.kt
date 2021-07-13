@@ -12,8 +12,7 @@ interface PixelApi {
         const val ACCESS_KEY = BuildConfig.PIXEL_ACCESS_KEY
     }
 
-
-    @Headers("X-Ratelimit-Remaining", "Authorization: Client-ID $ACCESS_KEY")
+    @Headers("Authorization: $ACCESS_KEY")
     @GET("search")
     suspend fun searchPhotos(
         @Query("query") query: String,
