@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PixelPhotoFinder</string>
+    <string name="images_could_not_be_loaded">Images could not be loaded</string>
+    <string name="retry">Retry</string>
 </resources>
