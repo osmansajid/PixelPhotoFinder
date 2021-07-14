@@ -3,8 +3,10 @@ package com.example.pixelphotofinder.ui.gallery
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.paging.LoadState
 import com.example.pixelphotofinder.R
 import com.example.pixelphotofinder.databinding.FragmentGalleryBinding
 import com.example.pixelphotofinder.viewmodel.GalleryViewModel
@@ -30,10 +32,31 @@ class GalleryFragment: Fragment(R.layout.fragment_gallery) {
                 header = GalleryPixelPhotoHeaderFooterAdapter {adapter.retry()},
                 footer = GalleryPixelPhotoHeaderFooterAdapter {adapter.retry()}
             )
+            buttonRetry.setOnClickListener {
+                adapter.retry()
+            }
         }
 
         viewModel.photos.observe(viewLifecycleOwner){
             adapter.submitData(viewLifecycleOwner.lifecycle,it)
+        }
+
+        adapter.addLoadStateListener {
+            binding.apply {
+                recyclerView.itemAnimator = null
+                progressBarCircle.isVisible = it.source.refresh is LoadState.Loading
+                recyclerView.isVisible = it.source.refresh is LoadState.NotLoading
+                buttonRetry.isVisible = it.source.refresh is LoadState.Error
+                textViewFail.isVisible = it.source.refresh is LoadState.Error
+
+                if(it.source.refresh is LoadState.NotLoading && adapter.itemCount < 1 && it.append.endOfPaginationReached){
+                    textViewNotFound.isVisible = true
+                    recyclerView.isVisible = false
+                }
+                else{
+                    textViewNotFound.isVisible = false
+                }
+            }
         }
 
         setHasOptionsMenu(true)
