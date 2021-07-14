@@ -11,7 +11,7 @@ import javax.inject.Inject
 class GalleryViewModel @ViewModelInject constructor(private val repository: PixelPhotoRepository): ViewModel() {
 
     companion object{
-        const val CURRENT_QUERY_STRING = "all"
+        const val CURRENT_QUERY_STRING = "colorful"
     }
     val query = MutableLiveData<String>(CURRENT_QUERY_STRING)
     val photos = query.switchMap { qString ->

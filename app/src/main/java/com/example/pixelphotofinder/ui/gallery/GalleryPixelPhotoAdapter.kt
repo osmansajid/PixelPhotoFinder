@@ -21,7 +21,7 @@ class GalleryPixelPhotoAdapter: PagingDataAdapter<PhotoItem,GalleryPixelPhotoAda
                     .load(photoItem.src.large)
                     .centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
-                    .error(R.drawable.ic_favorite)
+                    .error(R.drawable.ic_error)
                     .into(imageView)
 
                 textViewUsername.text = photoItem.photographer
