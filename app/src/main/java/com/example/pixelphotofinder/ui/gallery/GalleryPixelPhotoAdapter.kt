@@ -11,10 +11,22 @@ import com.example.pixelphotofinder.R
 import com.example.pixelphotofinder.data.PhotoItem
 import com.example.pixelphotofinder.databinding.ItemPhotoBinding
 
-class GalleryPixelPhotoAdapter: PagingDataAdapter<PhotoItem,GalleryPixelPhotoAdapter.PhotoViewHolder>(
+class GalleryPixelPhotoAdapter(private val listener: OnClickListener): PagingDataAdapter<PhotoItem,GalleryPixelPhotoAdapter.PhotoViewHolder>(
     COMPARATOR) {
 
-    class PhotoViewHolder(private val binding: ItemPhotoBinding): RecyclerView.ViewHolder(binding.root){
+    inner class PhotoViewHolder(private val binding: ItemPhotoBinding): RecyclerView.ViewHolder(binding.root){
+        init {
+            binding.root.setOnClickListener {
+                val pos = bindingAdapterPosition
+                if(pos != RecyclerView.NO_POSITION){
+                    val photo = getItem(pos)
+                    if(photo != null){
+                        listener.onClick(photo)
+                    }
+                }
+            }
+        }
+
         fun setItem(photoItem: PhotoItem){
             binding.apply {
                 Glide.with(itemView)
@@ -27,6 +39,10 @@ class GalleryPixelPhotoAdapter: PagingDataAdapter<PhotoItem,GalleryPixelPhotoAda
                 textViewUsername.text = photoItem.photographer
             }
         }
+    }
+
+    interface OnClickListener{
+        fun onClick(photoItem: PhotoItem)
     }
 
     companion object{
