@@ -1,21 +1,20 @@
 package com.example.pixelphotofinder.viewmodel
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.switchMap
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import androidx.paging.cachedIn
 import com.example.pixelphotofinder.repo.PixelPhotoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-class GalleryViewModel @ViewModelInject constructor(private val repository: PixelPhotoRepository): ViewModel() {
+class GalleryViewModel @ViewModelInject constructor(private val repository: PixelPhotoRepository,
+@androidx.hilt.Assisted savedState: SavedStateHandle): ViewModel() {
 
     companion object{
+        const val LAST_QUERY_STRING = "last_query"
         const val CURRENT_QUERY_STRING = "colorful"
     }
-    val query = MutableLiveData<String>(CURRENT_QUERY_STRING)
+    private val query = savedState.getLiveData(LAST_QUERY_STRING, CURRENT_QUERY_STRING)
     val photos = query.switchMap { qString ->
         repository.searchPhotos(qString)
     }.cachedIn(viewModelScope)
