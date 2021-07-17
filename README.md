@@ -1,4 +1,9 @@
-This is an image searching app
+This is an image searching app where
+
+- Preview images are loadeed in Home Screen with photographer name
+- User can search for images
+- Full images with photographer name can be seen by clicking on image
+- Easy retry logics and state handling logics are implemented for bad connection/ configuration changes  
 
 Tools and components used to make this app:
 
@@ -20,7 +25,15 @@ Tools and components used to make this app:
 
 **Details Page**
 
+![Search](https://user-images.githubusercontent.com/42430976/126045829-2beecaba-ed03-42ad-99f6-e723d5208b01.PNG)
+
+**Searching**
+
+![No connection](https://user-images.githubusercontent.com/42430976/126045830-711ae6c3-1b96-4171-86f8-1065ab2eb8dc.PNG)
+
+**Retry page in case of no/bad connection while first loading**
+
 ![ErrorPage](https://user-images.githubusercontent.com/42430976/126045419-6cc8697c-b5c1-4c9c-b637-25cafb94ec79.PNG)
 
-**Retry page in case of no/bad connection**
+**Retry page in case of no/bad connection in middle of loading**
 
