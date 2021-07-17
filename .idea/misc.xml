@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/drawable/ic_error.xml" value="0.13020833333333334" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/drawable/ic_favorite.xml" value="0.109375" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/drawable/ic_launcher_background.xml" value="0.109375" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/drawable/ic_search.xml" value="0.109375" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/drawable/image_gradient.xml" value="0.221" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/activity_main.xml" value="0.1171875" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/fragment_gallery.xml" value="0.2609375" />
+        <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/fragment_gallery_photo_details.xml" value="0.1140625" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/gallery_photo_details.xml" value="0.10416666666666667" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/gallery_photo_item_header_footer.xml" value="0.10416666666666667" />
         <entry key="..\:/Android Projects/Android Architecture Component Apps/PixelPhotoFinder/app/src/main/res/layout/item_photo.xml" value="0.246875" />

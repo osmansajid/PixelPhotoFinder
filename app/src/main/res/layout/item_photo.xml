@@ -38,15 +38,6 @@
             app:drawableStartCompat="@drawable/ic_user"
             tools:text="Username" />
 
-        <ImageView
-            android:id="@+id/button_favorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_favorite"
-            android:layout_margin="10dp"
-            />
-
     </RelativeLayout>
 
 </RelativeLayout>
